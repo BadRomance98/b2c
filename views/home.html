@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<script type="text/javascript" src="/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+	<title>首页</title>
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<a class="navbar-brand" href="/">YTP</a>
+			<div>
+				<ul class="nav navbar-nav">
+					<li {{if .IsHome}}class="active"{{end}}><a href="/">首页</a></li>
+					<li {{if .IsCategory}}class="active"{{end}}><a href="/category">说明</a></li>
+					<li {{if .IsTopic}}class="active"{{end}}><a href="/topic">文章</a></li>
+				</ul>
+			</div>
+
+			<div class="pull-right">
+				<ul class="nav navbar-nav">
+					{{if .IsLogin}}
+					<li><a href="/login?exit=true">退出</a></li>
+					{{else}}
+					<li><a href="/login">登录</a></li>
+					{{end}}
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		
+	</div>
+</body>
+</html>

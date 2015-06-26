@@ -4,7 +4,7 @@ import (
 	// "html/template"
 	"go-YTP/conf"
 	"go-YTP/controllers"
-	_ "go-YTP/models"
+	// _ "go-YTP/models"
 	"net/http"
 )
 

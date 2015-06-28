@@ -34,13 +34,13 @@ $(function(){
        if(Sys.ie==undefined) {
       
       $(".beyond").each(function(){
-        var maxwidth=30;
+        var maxwidth=20;
         if($(this).text().length>maxwidth){
             $(this).text($(this).text().substring(0,maxwidth));
             $(this).html($(this).html()+'...');
         }
     });
-  }else{
+  }else{/*兼容IE*/
   
    var wordLimit=function(){
     $(".beyond").each(function(){
@@ -66,8 +66,18 @@ wordLimit();
   
 });
 
-
-
+/*轮播控制*/
+$(document).ready(function(e) {
+    var unslider04 = $('#b04').unslider({
+        dots: true
+    }),
+    data04 = unslider04.data('unslider');
+     
+    $('.unslider-arrow04').click(function() {
+        var fn = this.className.split(' ')[1];
+        data04[fn]();
+    });
+});
 
 
   

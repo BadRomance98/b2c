@@ -55,7 +55,7 @@ ul,li,a{list-style: none; color:#000 !important;}
 	width:1200px;
 	margin:0 auto;
 	}
-#content{
+.content{
 	width:1000px; margin:0 auto;
 	}
 	
@@ -94,63 +94,10 @@ ul,li,a{list-style: none; color:#000 !important;}
 }
 
 .news{
-	width:100%;
+	width:1200px;
 	text-align:center;	
 	}
-/* .news ul{margin-top:10px;} */
-/* .photos{
-	float:left;
-	width:250px;
-	line-height:15px;
-	font-size:10px;
-	color:#999;
-}
-.news ul li strong{
-	
-	line-height:26px;
-	font-size:16px;
-	color:#000;
-	padding-left:10px;
-	top: 100px;
-}
-
-.news ul li span{
-	line-height:20px;
-	font-size:14px;
-}
- */
-/* .news ul li a:hover{
-	position: absolute;
-	top:0;left:0;
-	width:235;height:148px;
-	opacity:0.5;
-	filter:alpha:(opacity=50);
-	background:#000;
-} 
-.news ul li a:hover strong{
-	position: absolute;
-}
-
-.picture{position: relative;float: left;}
- */
-.news ul{float:left;margin-top:30px;width: 230px;margin:10px;}
-.news ul p{width:250px;word-wrap:break-word!important;}
-.news strong{color: #000;}
-.e{
-	display: none;
-	position: absolute;
-	top:44px;left:94px;
-	width:60px;height:60px;
-	border:1px solid #333;
-	border-radius:50%;
-	background:rgb(0,130,192);
-	line-height: 50px;
-	text-align: center;
-	padding-left:6px;
-	padding-top: 10px;
-}
-.news li{position: relative;} 
-
+.news h2{padding-right: 74px;}/*text-align:center;不行*/
 
 
 .re_All{
@@ -224,3 +171,34 @@ ul,li,a{list-style: none; color:#000 !important;}
 
 }
 
+
+
+/*新闻动态蒙版*/
+.banner { width:1200px;margin:0 auto; position: relative; overflow: auto; text-align: center;}
+.banner li { list-style: none; }
+.banner ul li { float: left; }
+#b04 { width: 640px;}
+#b04 .dots { position: absolute; left: 0; right: 0; bottom: 20px;}
+#b04 .dots li 
+{ 
+    display: inline-block; 
+    width: 10px; 
+    height: 10px; 
+    margin: 0 4px; 
+    text-indent: -999em; 
+    border: 2px solid #fff; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    opacity: .4; 
+    -webkit-transition: background .5s, opacity .5s; 
+    -moz-transition: background .5s, opacity .5s; 
+    transition: background .5s, opacity .5s;
+}
+#b04 .dots li.active 
+{
+    background: #fff;
+    opacity: 1;
+}
+#b04 .arrow { position: absolute; top: 200px;}
+#b04 #al { left: 15px;}
+#b04 #ar { right: 15px;}

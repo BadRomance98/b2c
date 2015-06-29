@@ -10,10 +10,10 @@ ul,li,a{list-style: none; color:#000 !important;}
 
 
 /*public*/
-.inPro,.colTv{margin-top:70px;}
+.inPro,.colTv{margin-top:100px;}
 .inPro,.colTv{
 	width:100%;
-	height:300px;
+	height: 300px;
 	text-align:center;
 	}
 .inPro p,.colTv p,.news p,.about_us p{line-height:22px;color:#999;margin-top:10px;}
@@ -86,7 +86,7 @@ ul,li,a{list-style: none; color:#000 !important;}
 .inPro_sec ul{}
 .inPro_sec ul li span{}
 
-.colTv ul{padding-top:20px;}
+.colTv ul{padding-top:20px;height:500px;}
 .colTv ul li{
 	width:250px;
 	height:126px;
@@ -94,22 +94,22 @@ ul,li,a{list-style: none; color:#000 !important;}
 }
 
 .news{
-	width:1200px;
+	
 	text-align:center;	
 	}
-.news h2{padding-right: 74px;}/*text-align:center;不行*/
+.news h2{text-align:center;	}/*text-align:center;不行*/
 
 
 .re_All{
 	width:920px;
 	text-align:center;	
 	background:#FFFFFF;
-	padding:40px;
+	padding:80px;
 	float:left;
 	
 	}
 .re_All .circle{
-	margin-left:400px;
+	margin-left:340px;
 	width:150px;
 	height:40px;
 	border:1px solid #000;

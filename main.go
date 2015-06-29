@@ -6,6 +6,7 @@ import (
 	"go-YTP/controllers"
 	// _ "go-YTP/models"
 	"net/http"
+	"runtime"
 )
 
 var HttpPort string
@@ -16,6 +17,8 @@ func init() {
 }
 
 func main() {
+	//多核运行
+	runtime.GOMAXPROCS(runtime.NumCPU())
 	//静态文件
 	http.Handle("/css/", http.FileServer(http.Dir("statics")))
 	http.Handle("/js/", http.FileServer(http.Dir("statics")))

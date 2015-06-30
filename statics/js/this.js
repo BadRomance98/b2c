@@ -3,20 +3,6 @@
        
 
 
-$(function(){
-   $(".pt").bind("mouseover",function(event){
-   		$(".pt").css("opacity","0.5");
-         $(".pt span").show();
-         event.stopPropagation();
-   });
-   $(".pt").bind("mouseout",function(event){
-        	$(".pt").css("opacity","1");
-         $(".pt span").hide();
-         event.stopPropagation();/*冒泡有问题*/
-   })
-
-})
-
 
 $(function(){
     //限制字符个数

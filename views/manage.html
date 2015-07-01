@@ -1,0 +1,41 @@
+{{template "header"}}
+	<title>管理</title>
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			{{template "manage" .}}
+		</div>
+	</div>
+	<div class="container">
+		<h1>新闻列表<small>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/news/add">添加</a></small></h1>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>名称</th>
+					<th>内容</th>
+					<th>图片浏览</th>
+					<th>新闻地址</th>
+					<th>状态</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{range .newslimit}}
+					<tr>
+					<th>{{.Id}}</th>
+					<th>{{.Title}}</th>
+					<th>{{.Content}}</th>
+					<th><a href="/image/news/{{.PictureUrl}}" target="_blank">{{.PictureUrl}}</th>
+					<th><a href="{{.HrefUrl}}">{{.HrefUrl}}</a></th>
+					<th>{{if .Status}}启用{{else}}禁用{{end}}</th>
+					<th><a href="/news/delete?id={{.Id}}">删除</a></th>
+					</tr>
+				{{end}}
+			</tbody>
+		</table>
+	</div>
+
+</body>
+</html>

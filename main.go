@@ -4,7 +4,7 @@ import (
 	// "html/template"
 	"go-YTP/conf"
 	"go-YTP/controllers"
-	// _ "go-YTP/models"
+	_ "go-YTP/models"
 	"net/http"
 	"runtime"
 )
@@ -24,11 +24,18 @@ func main() {
 	http.Handle("/js/", http.FileServer(http.Dir("statics")))
 	http.Handle("/img/", http.FileServer(http.Dir("statics")))
 	http.Handle("/fonts/", http.FileServer(http.Dir("statics")))
+	http.Handle("/image/", http.FileServer(http.Dir("upload")))
 
 	//路由
 	http.HandleFunc("/", controllers.Home)
 	http.HandleFunc("/login", controllers.Login)
-	http.HandleFunc("/nopage", controllers.Nopage)
+	http.HandleFunc("/loginPost", controllers.LoginPost)
+
+	http.HandleFunc("/manage", controllers.Manage)
+
+	http.HandleFunc("/news/add", controllers.NewsAdd)
+	http.HandleFunc("/news/addPost", controllers.NewsAddPost)
+	// http.HandleFunc("/news/delete", controllers.NewsDel)
 
 	http.ListenAndServe(HttpPort, nil)
 }

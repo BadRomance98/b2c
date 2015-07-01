@@ -6,7 +6,7 @@
 
 body{background:rgb(247,247,247);}
 
-ul,li,a{list-style: none; color:#000 !important;}
+ul,li,a{list-style: none;text-decoration: none !important; color:#000 !important;}
 
 
 /*public*/
@@ -31,7 +31,9 @@ ul,li,a{list-style: none; color:#000 !important;}
 .nav_r{
 	
 	float:right;
-	padding-top:60px;
+	padding-top:54px;
+	padding-bottom: -20px;
+	margin-bottom: 0px;
 	}
 .nav_r li{
 	float:left;
@@ -93,29 +95,37 @@ ul,li,a{list-style: none; color:#000 !important;}
 	float:left;
 }
 
-.news{
-	
-	text-align:center;	
+.news{	
 	}
 .news h2{text-align:center;	}/*text-align:center;不行*/
 .news_wr{
 	width: 1000px;
-	height:800px;
+	height:700px;
 	padding-top: 30px;
-	border:1px solid red;
+	
 }
 .news ul{
-	width: 230px;height:300px;border:1px solid red;float:left;
+	width: 230px;height:300px;float:left;
 	padding:5px;
 	position: relative;
 }
 .news ul li{
 	width:230px;
 	height:180px;
-	border:1px solid red;
+	
 	float: left;
 	margin:5px;
 
+}
+.news_left h5{
+	color: rgb(11,27,50);
+	font-size: 16px;
+	font-weight: bold;
+
+}
+.news_left p{}
+.cc{
+	text-align: center;
 }
 .news a:hover{
 	opacity: 0.5;
@@ -125,12 +135,24 @@ ul,li,a{list-style: none; color:#000 !important;}
 position: absolute;
 width:100%;
 height:100%;
-top:100px;
-left:0;
-}
-.continue{
-	
+top:50px;
+left:80px;
+width:80px;height:80px;
 
+border-radius:50%;
+background:rgb(0,130,192) !important;
+line-height: 50px;
+text-align: center;
+padding-left:10px;
+padding-top: 24px;	
+display: block;
+}
+.news span{
+	display: none;
+}
+.news_left{
+	padding-left: 5px;
+}
 }
 .re_All{
 	width:100%;
@@ -141,12 +163,14 @@ left:0;
 	
 	}
 .re_All .circle{
-	margin-left:46%;
-	width:150px;
+	margin-left:43%;
+	width:130px;
 	height:40px;
 	border:1px solid #000;
 	border-radius:20px 20px 20px 20px;
 	background:#000000;
+	padding-left: 70px;
+	margin-bottom: 100px;
 	}
 .re_All .circle p{
 	color:white;
@@ -158,7 +182,7 @@ left:0;
     height:450px;
 	text-align:center;
 	background:rgb(245,245,245);
-	padding-top: 220px;	
+	padding-top: 30px;	
 	}
 
 .about_us ul{
@@ -204,16 +228,23 @@ left:0;
 	padding-left: 34px;
 }
 .footer{
-	
+	width: 100%;
 	line-height:40px;
-	
+	height: 40px;
 	color:#000000;
-}
-.footer ul li{
-	float: left;
-	text-align:center;
-	width:1000px;
 	background:rgb(0,130,192);
+}
+
+.footer ul{
+	width: 1000px;margin: 0 auto;
+}
+.footer_left {
+	float: left;
+	
+}
+.footer_right{
+	float: right;
+
 }
 .top_btn{
 	position:fixed;bottom:0;right:4%;

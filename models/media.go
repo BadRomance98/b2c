@@ -10,5 +10,5 @@ type Media struct {
 	HrefUrl    string
 	SubDate    time.Time
 	Status     int
-	OrderBy    int64
+	OrderBy    int
 }

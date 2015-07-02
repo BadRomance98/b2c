@@ -35,7 +35,8 @@ func main() {
 
 	http.HandleFunc("/news/add", controllers.NewsAdd)
 	http.HandleFunc("/news/addPost", controllers.NewsAddPost)
-	// http.HandleFunc("/news/delete", controllers.NewsDel)
+	http.HandleFunc("/news/delete", controllers.NewsDel)
+	http.HandleFunc("/news/edit", controllers.NewsAdd)
 
 	http.ListenAndServe(HttpPort, nil)
 }

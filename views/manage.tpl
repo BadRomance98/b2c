@@ -1,5 +1,5 @@
 {{define "manage"}}
-<a class="navbar-brand" href="/">YTP</a>
+<a class="navbar-brand" href="/">首页</a>
 <div>
 	<ul class="nav navbar-nav">
 		<li {{if .isNews}}class="active"{{end}}><a href="/manage">新闻</a></li>

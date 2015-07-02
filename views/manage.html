@@ -18,6 +18,7 @@
 					<th>图片浏览</th>
 					<th>新闻地址</th>
 					<th>状态</th>
+					<th>首页展示</th>
 					<th>操作</th>
 				</tr>
 			</thead>
@@ -30,12 +31,26 @@
 					<th><a href="/image/news/{{.PictureUrl}}" target="_blank">{{.PictureUrl}}</th>
 					<th><a href="{{.HrefUrl}}">{{.HrefUrl}}</a></th>
 					<th>{{if .Status}}启用{{else}}禁用{{end}}</th>
-					<th><a href="/news/delete?id={{.Id}}">删除</a></th>
+					<th>{{if .OrderBy}}展示{{else}}不展示{{end}}</th>
+					<th><a href="/news/edit?id={{.Id}}">修改状态</a>&nbsp;<a href="/news/delete?id={{.Id}}">删除</a></th>
 					</tr>
 				{{end}}
 			</tbody>
 		</table>
-	</div>
-
+		<nav>
+	  	<ul class="pagination">
+	  	{{$pageNum := .pagenum}}
+		{{range .pagesize}}
+		{{if ne 0 .}}
+		{{if eq $pageNum .}}
+		<li class="active"><a href="/manage?p={{.}}">{{.}}</a></li>
+		{{else}}
+		<li><a href="/manage?p={{.}}">{{.}}</a></li>
+		{{end}}
+		{{end}}
+		{{end}}
+	    </ul>
+	</nav>
+	</div>
 </body>
 </html>

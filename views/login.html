@@ -8,12 +8,12 @@
 				{{.error}}
 			</div>
 		  <div class="form-group">
-		    <label>Account</label>
-		    <input id="uname" class="form-control" placeholder="Enter account" name="uname" value="{{.uname}}" autocomplete="off">
+		    <label>用户名</label>
+		    <input id="uname" class="form-control" placeholder="输入用户名" name="uname" value="{{.uname}}" autocomplete="off">
 		  </div>
 		  <div class="form-group">
-		    <label>Password</label>
-		    <input id="pwd"  onfocus="this.type='password'" class="form-control" placeholder="Password" name="pwd" autocomplete="off">
+		    <label>密码</label>
+		    <input id="pwd"  onfocus="this.type='password'" class="form-control" placeholder="输入密码" name="pwd" autocomplete="off">
 		  </div>
 		  <div class="checkbox">
 		    <label>
@@ -21,7 +21,6 @@
 		    </label>
 		  </div>
 		  <button type="submit" class="btn btn-default" onclick="return checkInput();">登录</button>
-		  <button class="btn btn-default" onclick="return backToHome();">返回</button>
 		</form>
 		<script type="text/javascript">
 			function checkInput(){	
@@ -30,10 +29,6 @@
 				var pwd = $("#pwd").val()
 				if (pwd=="") {alert("请输入密码");return false;}
 				return true;
-			}
-			function backToHome(){	
-				window.location.href("/");
-				return false;
 			}
 		</script>
 	</div>

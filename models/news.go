@@ -1,7 +1,6 @@
 package models
 
 import (
-	"strconv"
 	"time"
 )
 
@@ -13,7 +12,7 @@ type News struct {
 	HrefUrl    string
 	SubDate    time.Time
 	Status     int
-	OrderBy    int64
+	OrderBy    int
 }
 
 func GetNewsCount() (int64, error) {
@@ -28,50 +27,23 @@ func GetNewsLimit(p int) ([]News, error) {
 	return news, err
 }
 
-func SaveOrUpdateNews(id string, title string, content string, hrefurl string, fileName string) error {
-	intId, err := strconv.ParseInt(id, 10, 64)
-	if err != nil {
-		news := new(News)
-		news.Title = title
-		news.Content = content
-		news.HrefUrl = hrefurl
-		news.PictureUrl = fileName
-		news.SubDate = time.Now()
-		news.Status = 1
-
-		err = InsertNews(news)
-		return err
-	}
-
-	news := new(News)
-	has, err := Xorm.Id(intId).Get(news)
-	if err != nil {
-		return err
-	}
-	if has {
-		news.Title = title
-		news.Content = content
-		news.HrefUrl = hrefurl
-		news.PictureUrl = fileName
-		err = UpdateNews(intId, news)
-		return err
-	} else {
-		return nil
-	}
-
-}
-
 func InsertNews(news *News) error {
 	_, err := Xorm.Insert(news)
 	return err
 }
 
 func UpdateNews(id int64, news *News) error {
-	_, err := Xorm.Id(id).Update(news)
+	_, err := Xorm.Id(id).Cols("status", "order_by").Update(news)
 	return err
 }
 
 func DeleteNews(id int64) error {
-	_, err := Xorm.Id(id).Delete(new(User))
+	_, err := Xorm.Id(id).Delete(new(News))
 	return err
+}
+
+func SelectNews(id int64) (*News, error) {
+	news := new(News)
+	_, err := Xorm.Id(id).Get(news)
+	return news, err
 }

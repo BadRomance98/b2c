@@ -41,15 +41,18 @@ func init() {
 	//同步数据结构
 	engine.Sync2(new(User), new(News), new(Media))
 
-	// 输出sql到log
-	var filelog string
-	filelog = "log/xorm-sql-" + strings.Split(time.Now().String(), " ")[0] + ".log"
-	f, err := os.OpenFile(filelog, os.O_WRONLY|os.O_CREATE, 0666)
-	if err != nil {
-		log.Fatalf("日志文件建立失败:%s", err)
-		os.Exit(1)
+	runmode, _ := conf.Cfg.GetValue("", "runmode")
+	if !strings.EqualFold(runmode, "dev") {
+		// 输出sql到log
+		var filelog string
+		filelog = "log/xorm-sql-" + strings.Split(time.Now().String(), " ")[0] + ".log"
+		f, err := os.OpenFile(filelog, os.O_WRONLY|os.O_CREATE, 0666)
+		if err != nil {
+			log.Fatalf("日志文件建立失败:%s", err)
+			os.Exit(1)
+		}
+		engine.Logger = xorm.NewSimpleLogger(f)
 	}
-	engine.Logger = xorm.NewSimpleLogger(f)
 
 	//读取配置文件，设置xorm日志状态
 	showSQL, _ := conf.Cfg.GetValue("xorm", "showSql")

@@ -185,19 +185,11 @@ display: block;
  	background: url(../img/read.png) no-repeat 50% -10px;
  	height: 140px;
  	padding-top: 20px;
- 	margin:;
+ 	display: block;
 
  }
 
-.re_All .circle p{
-	color:#fff;
-	line-height:40px;
-	position:absolute;
-	left:648px;
-	font-size: 16px;
 
-	}
-	
 .about_us{
     width: 100%;
     height:450px;

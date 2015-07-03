@@ -10,3 +10,15 @@ goconfig
 
 mysql
 安装命令:go get github.com/go-sql-driver/mysql
+
+conf/base.go
+读取配置文件
+
+models/base.go
+加载数据库
+
+upload
+文件上传保存位置
+
+log
+开发者模式，日志不会写入log文件夹中，而是直接在控制台打印出来

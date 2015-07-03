@@ -1,0 +1,52 @@
+{{template "header"}}
+	<title>管理</title>
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			{{template "manage" .}}
+		</div>
+	</div>
+	<div class="container">
+		<h1>媒体列表<small>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/media/add">添加</a></small></h1>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>图片浏览</th>
+					<th>媒体地址</th>
+					<th>状态</th>
+					<th>首页展示</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{range .medialimit}}
+					<tr>
+					<th>{{.Id}}</th>
+					<th><a href="/image/media/{{.PictureUrl}}" target="_blank">{{.PictureUrl}}</th>
+					<th><a href="{{.HrefUrl}}">{{.HrefUrl}}</a></th>
+					<th>{{if .Status}}启用{{else}}禁用{{end}}</th>
+					<th>{{if .OrderBy}}展示{{else}}不展示{{end}}</th>
+					<th><a href="/media/edit?id={{.Id}}">修改状态</a>&nbsp;<a href="/media/delete?id={{.Id}}">删除</a></th>
+					</tr>
+				{{end}}
+			</tbody>
+		</table>
+		<nav>
+	  	<ul class="pagination">
+	  	{{$pageNum := .pagenum}}
+		{{range .pagesize}}
+			{{if ne 0 .}}
+				{{if eq $pageNum .}}
+					<li class="active"><a href="/media?p={{.}}">{{.}}</a></li>
+					{{else}}
+					<li><a href="/media?p={{.}}">{{.}}</a></li>
+				{{end}}
+			{{end}}
+		{{end}}
+	    </ul>
+	</nav>
+	</div>
+</body>
+</html>

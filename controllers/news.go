@@ -27,6 +27,7 @@ func NewsAdd(w http.ResponseWriter, r *http.Request) {
 		if err != nil {
 			log.Println("数据库查询失败:" + err.Error())
 			http.Redirect(w, r, "/manage", http.StatusFound)
+			return
 		}
 		data["news"] = news
 	}
@@ -94,6 +95,7 @@ func NewsAddPost(w http.ResponseWriter, r *http.Request) {
 		log.Println("新闻添加失败:" + err.Error())
 	}
 	http.Redirect(w, r, "/manage", http.StatusFound)
+	return
 }
 
 func NewsDel(w http.ResponseWriter, r *http.Request) {
@@ -111,4 +113,5 @@ func NewsDel(w http.ResponseWriter, r *http.Request) {
 	}
 
 	http.Redirect(w, r, "/manage", http.StatusFound)
+	return
 }

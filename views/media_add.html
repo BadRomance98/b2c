@@ -1,0 +1,48 @@
+{{template "header"}}
+	<title>管理</title>
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			{{template "manage" .}}
+		</div>
+	</div>
+	<div class="container">
+		<h1>媒体列表</h1>
+		<div class="container" style="color:red;">
+			{{.error}}
+		</div>
+		<form method="POST" action="/media/addPost" enctype="multipart/form-data">
+				<input id="id" name="id" value="{{.id}}" hidden="true">
+			{{if .id}}
+				<div class="form-group">
+				    <label>是否在首页展示</label>
+				    <select name="orderby" class="form-control">
+			  			<option {{if eq .media.OrderBy 1}}selected="selected"{{end}} value="1">展示</option>
+			  			<option {{if eq .media.OrderBy 0}}selected="selected"{{end}} value="0">不展示</option>
+			  		</select>
+			  	</div>
+			  	<div class="form-group">
+			  		<label>媒体状态</label>
+			  		<select name="status" class="form-control">
+			  			<option {{if eq .media.Status 1}}selected="selected"{{end}} value="1">启用</option>
+			  			<option {{if eq .media.Status 0}}selected="selected"{{end}} value="0">禁用</option>
+			  		</select>
+			  	</div>
+			{{else}}
+			  	<div class="form-group">
+			    	<label>媒体链接</label>
+			    	<input id="hrefurl" class="form-control" placeholder="请输入超链接" name="hrefurl">
+			  	</div>
+			  	<div class="form-group">
+			    	<label>媒体图片</label>
+			    	<input id="file" type="file" name="picture" class="form-control"></input>
+			  	</div>
+		  	{{end}}
+		  	<button type="submit" class="btn btn-default">提交</button>
+		  
+		</form>
+	</div>
+
+</body>
+</html>

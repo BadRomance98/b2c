@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />    
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="format-detection" content="telephone=yes"/>
+<meta name="msapplication-tap-highlight" content="no" /> -->
     <title>prgroam</title>
     <link rel="stylesheet" type="text/css" href="/css/this.css">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    
+   <!--  <link rel="stylesheet" type="text/css" media="screen and(min-width:600px;)" href="/css/small.css">
+    <link rel="stylesheet" type="text/css" media="screen and(min-width:600px)and (max-width:1000px)"  href="/css/medium.css"> -->
     <link rel="stylesheet" type="text/css" href="/css/common.css" />
     <script src="/js/jquery-1.11.3.min.js"></script>
     <script src="/js/bootstrap.js"></script>
     <script src="/js/this.js"></script>
     <script src="/js/unslider.min.js"></script>
     <script src="/js/modernizr.custom.79639.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=1WPzc5POLG3CaIMs5s7jUR5i"></script>
+    <style type="text/css">
+      #allmap{height:250px;}
+    </style>
 </head> 
 <body>
   <div class="hider"><a name="0F"></a></div>
@@ -51,7 +60,7 @@
 <div class="hider"><a name="1F"></a></div>
          <div class="content">
             <div class="inPro">
-                <h2><a name="1F"><strong>核心产品</strong></a></h2>
+                <h2><a><strong>核心产品</strong></a></h2>
                 <p>Always adhere to innovation, to provide you with the best produ</p>
                 <p>Core product</p>
                <ul class="inPro_sec">
@@ -84,7 +93,7 @@
             </div>
     </div>   
 
-    <div class="hider"><a name="2F"></a></div>
+    <div class="hider"><a name="2F">gf</a></div>
     <div  class="colwrap">
             <div class="colTv">
                 <h2><a><strong>合作媒体</strong></a></h2>
@@ -104,7 +113,7 @@
             </div>
     </div>
 
-<div class="hider"><a id="3F" name="3F"></a></div>
+<div class="hider"><a name="3F"></a></div>
 <div class="content">
   <div class="main">
             <div class="news">
@@ -220,7 +229,8 @@
                     
                     </ul>
                 </li>
-                <li id="map"><img src="\img\aboutus\pic.png"/></li>
+                
+                <div id="allmap"></div>
             </ul>
                
          </div>
@@ -242,3 +252,17 @@
 
 </body>
 </html>
+<script type="text/javascript">
+// 百度地图API功能
+var sContent="常高新E726"
+var map = new BMap.Map("allmap");
+var point = new BMap.Point(119.999733,31.817005);
+map.centerAndZoom(point, 15);
+map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+var marker = new BMap.Marker(point);  // 创建标注
+map.addOverlay(marker);               // 将标注添加到地图中
+var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象
+marker.addEventListener("click", function(){          
+    map.openInfoWindow(infoWindow,point); //开启信息窗口
+  });
+</script>

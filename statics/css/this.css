@@ -25,23 +25,25 @@ ul,li,a{list-style: none;text-decoration: none !important; color:#000 !important
 	
 }
 .nav{
-	background:url(../img/youtupu.jpg) 50px 30px no-repeat;
-	width:1200px;
+	background:url(../img/youtupu.jpg) 20% 30px no-repeat;
+	width:100%;
 	margin:0 auto;
 	font-size:14px;
 }
 .nav_r{
 	line-height: 100px;
 	float:right;
-	padding-top:54px;
+	width: 40%;
+	padding-top:40px;
 	padding-bottom: 10px;
-	margin-bottom: 0px;
+	
+
 	}
 .nav_r li{
 	float:left;
 	padding-right:10px;
-	font-size: 16px;
-	line-height: 50px;
+	font-size: 14px;
+	height: 70px;
 	}
 
 .nav_r li strong{
@@ -293,7 +295,7 @@ display: block;
 }
 
 .hider{
-	width: 0px;height:0px;
+	width: 0px;height:0px;font-size: 0;
 }
 
 
@@ -328,3 +330,4 @@ display: block;
 #b04 .arrow { position: absolute; top: 200px;}
 #b04 #al { left: 20px;}
 #b04 #ar { right: 20px;}
+

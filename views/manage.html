@@ -41,13 +41,13 @@
 	  	<ul class="pagination">
 	  	{{$pageNum := .pagenum}}
 		{{range .pagesize}}
-		{{if ne 0 .}}
-		{{if eq $pageNum .}}
-		<li class="active"><a href="/manage?p={{.}}">{{.}}</a></li>
-		{{else}}
-		<li><a href="/manage?p={{.}}">{{.}}</a></li>
-		{{end}}
-		{{end}}
+			{{if ne 0 .}}
+				{{if eq $pageNum .}}
+					<li class="active"><a href="/manage?p={{.}}">{{.}}</a></li>
+					{{else}}
+					<li><a href="/manage?p={{.}}">{{.}}</a></li>
+				{{end}}
+			{{end}}
 		{{end}}
 	    </ul>
 	</nav>

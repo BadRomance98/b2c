@@ -185,24 +185,15 @@ display: block;
  	background: url(../img/read.png) no-repeat 50% -10px;
  	height: 140px;
  	padding-top: 20px;
+ 	margin:;
 
  }
-/*.re_All .circle{
-	margin-left:43%;
-	width:130px;
-	height:40px;
-	border:1px solid #000;
-	border-radius:20px 20px 20px 20px;
-	background:#000000;
-	padding-left: 70px;
-	margin-bottom: 100px;
-	}*/
 
 .re_All .circle p{
 	color:#fff;
 	line-height:40px;
 	position:absolute;
-	left:864px;
+	left:648px;
 	font-size: 16px;
 
 	}
@@ -310,7 +301,7 @@ display: block;
 }
 
 .hider{
-	width: 0px;height:0px;font-size: 0;overflow: hidden;
+	width: 0px;height:0px;
 }
 
 

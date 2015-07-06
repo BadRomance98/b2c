@@ -1,4 +1,16 @@
+$(function(){
+     if($(document).scrollTop()>0){
+        $(".top_btn").css("display","block");
+     };
+});
 
+
+$(function(){
+
+     $("#border").bind("click",function(){
+        $(".wraptop").slideToggle();
+     });    
+});
 
 $(function(){
     //限制字符个数

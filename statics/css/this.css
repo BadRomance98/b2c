@@ -57,7 +57,7 @@ ul,li,a{list-style: none;text-decoration: none !important; color:#000 !important
  
 } 
 .header{
-	height:300px;
+	height:500px;
 	width:100%;
 	margin:0 auto;
 	background: rgb(42,135,198);
@@ -287,6 +287,7 @@ display: block;
 	position:fixed;bottom:50px;right:6%;
 	line-height: 50px;
 	text-align: center;
+	display: none;
 	
 }
 
@@ -331,3 +332,7 @@ display: block;
 #b04 #al { left: 20px;}
 #b04 #ar { right: 20px;}
 
+@media screen and (max-width: 600px){
+
+
+}

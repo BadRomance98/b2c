@@ -44,5 +44,6 @@ func main() {
 	http.HandleFunc("/media/delete", controllers.MediaDel)
 	http.HandleFunc("/media/edit", controllers.MediaAdd)
 
+	http.HandleFunc("/home/ajax", controllers.HomeAjaxImg)
 	http.ListenAndServe(HttpPort, nil)
 }

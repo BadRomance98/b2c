@@ -31,14 +31,9 @@ func Manage(w http.ResponseWriter, r *http.Request) {
 		page[i] = i + 1
 	}
 
-	newslimit, err := models.GetNewsLimit(p)
+	newslimit, err := models.GetNewsLimit(10, p)
 	if err != nil {
 		log.Println("数据库连接失败:" + err.Error())
-	}
-	for li, newsone := range newslimit {
-		if len(newsone.Content) > 20 {
-			newslimit[li].Content = string([]rune(newsone.Content)[0:17]) + "..."
-		}
 	}
 
 	data["pagenum"] = p + 1
@@ -73,7 +68,7 @@ func ManageMedia(w http.ResponseWriter, r *http.Request) {
 		page[i] = i + 1
 	}
 
-	medialimit, err := models.GetMediaLimit(p)
+	medialimit, err := models.GetMediaLimit(10, p)
 	if err != nil {
 		log.Println("数据库连接失败:" + err.Error())
 	}

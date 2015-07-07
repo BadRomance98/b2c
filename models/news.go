@@ -21,9 +21,9 @@ func GetNewsCount() (int64, error) {
 	return count, err
 }
 
-func GetNewsLimit(p int) ([]News, error) {
+func GetNewsLimit(s int, p int) ([]News, error) {
 	news := make([]News, 0)
-	err := Xorm.Limit(10, 10*p).Find(&news)
+	err := Xorm.Limit(s, s*p).Find(&news)
 	return news, err
 }
 
@@ -45,5 +45,11 @@ func DeleteNews(id int64) error {
 func SelectNews(id int64) (*News, error) {
 	news := new(News)
 	_, err := Xorm.Id(id).Get(news)
+	return news, err
+}
+
+func GetNewsHomeList() ([]News, error) {
+	news := make([]News, 0)
+	err := Xorm.Where("status=1 and order_by=1").Find(&news)
 	return news, err
 }

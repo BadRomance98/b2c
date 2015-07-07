@@ -8,7 +8,7 @@ import (
 )
 
 func Home(w http.ResponseWriter, r *http.Request) {
-	t, err := template.ParseFiles("views/home.html")
+	t, err := template.ParseFiles("views/home.html", "views/header.tpl", "views/foot.tpl")
 	pageNotFound(w, err)
 	t.Execute(w, nil)
 }

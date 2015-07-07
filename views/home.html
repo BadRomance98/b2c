@@ -23,11 +23,11 @@
         $.get("/home/ajax",function(result){
           $(result.Media).each(function(index,emp){
             console.log(emp)
-            $(".media-list").append('<li><img src="'+'/image/media/'+emp.PictureUrl+'"/></li>')
+            $(".media-list").append('<li><a href="'+emp.HrefUrl+'"><img src="'+'/image/media/'+emp.PictureUrl+'"/></a></li>')
           })
           $(result.News).each(function(index,emp){
             console.log(emp)
-            $(".news_wr").append('<ul><li><div class="pt"><a href=""><img src="'+'/image/news/'+emp.PictureUrl+'"/><span></span></a></div></li><div class="news_left"><h5 class="font">'+emp.Title+'</h5><p class="beyond font">'+emp.Content+'</p></div></ul>')
+            $(".news_wr").append('<ul><li><div class="pt"><a href="'+emp.HrefUrl+'"><img src="'+'/image/news/'+emp.PictureUrl+'"/></a><span></span></a></div></li><div class="news_left"><h5 class="font">'+emp.Title+'</h5><p class="beyond font">'+emp.Content+'</p></div></ul>')
           })
         })
       }

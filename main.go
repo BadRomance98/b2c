@@ -45,5 +45,10 @@ func main() {
 	http.HandleFunc("/media/edit", controllers.MediaAdd)
 
 	http.HandleFunc("/home/ajax", controllers.HomeAjaxImg)
+
+	http.HandleFunc("/terms", controllers.HomeTerms)
+	http.HandleFunc("/join", controllers.HomeJoin)
+	http.HandleFunc("/contact", controllers.HomeContact)
+	http.HandleFunc("/policy", controllers.HomePolicy)
 	http.ListenAndServe(HttpPort, nil)
 }

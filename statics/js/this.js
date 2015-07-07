@@ -62,7 +62,7 @@ wordLimit();
 });
 
 /*轮播控制*/
-$(document).ready(function(e) {
+/*$(document).ready(function(e) {
     var unslider04 = $('#b04').unslider({
         dots: true
     }),
@@ -75,4 +75,4 @@ $(document).ready(function(e) {
 });
 
 
-  
+  */

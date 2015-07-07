@@ -8,7 +8,7 @@ import (
 )
 
 func Home(w http.ResponseWriter, r *http.Request) {
-	t, err := template.ParseFiles("views/home.html", "views/header.tpl")
+	t, err := template.ParseFiles("views/home.html", "views/header.tpl", "views/foot.tpl")
 	pageNotFound(w, err)
 	t.Execute(w, nil)
 }
@@ -28,4 +28,33 @@ func HomeAjaxImg(w http.ResponseWriter, r *http.Request) {
 	}
 	w.Header().Set("Content-Type", "application/json")
 	w.Write(js)
+}
+
+func HomeTerms(w http.ResponseWriter, r *http.Request) {
+	t, err := template.ParseFiles("views/terms.html", "views/info_header.tpl", "views/foot.tpl", "views/header.tpl")
+	pageNotFound(w, err)
+	data := make(map[string]interface{})
+	data["isTerm"] = true
+	t.Execute(w, data)
+}
+func HomeJoin(w http.ResponseWriter, r *http.Request) {
+	t, err := template.ParseFiles("views/join.html", "views/info_header.tpl", "views/foot.tpl", "views/header.tpl")
+	pageNotFound(w, err)
+	data := make(map[string]interface{})
+	data["isJoin"] = true
+	t.Execute(w, data)
+}
+func HomeContact(w http.ResponseWriter, r *http.Request) {
+	t, err := template.ParseFiles("views/contact.html", "views/info_header.tpl", "views/foot.tpl", "views/header.tpl")
+	pageNotFound(w, err)
+	data := make(map[string]interface{})
+	data["isContact"] = true
+	t.Execute(w, data)
+}
+func HomePolicy(w http.ResponseWriter, r *http.Request) {
+	t, err := template.ParseFiles("views/policy.html", "views/info_header.tpl", "views/foot.tpl", "views/header.tpl")
+	pageNotFound(w, err)
+	data := make(map[string]interface{})
+	data["isPolicy"] = true
+	t.Execute(w, data)
 }

@@ -20,3 +20,9 @@ func pageNotFound(w http.ResponseWriter, err error) {
 		t.Execute(w, nil)
 	}
 }
+
+func CheckError(s string, err error) {
+	if err != nil {
+		log.Println(s + err.Error())
+	}
+}

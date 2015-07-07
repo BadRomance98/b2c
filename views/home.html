@@ -2,10 +2,10 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-<meta name="apple-mobile-web-app-capable" content="yes" />    
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-<meta name="format-detection" content="telephone=yes"/>
-<meta name="msapplication-tap-highlight" content="no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />    
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=yes"/>
+    <meta name="msapplication-tap-highlight" content="no" />
     <title>prgroam</title>
     <link rel="stylesheet" type="text/css" media="screen and (min-width:600px)" href="/css/this.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -17,261 +17,158 @@
     <script src="/js/this.js"></script>
     <script src="/js/unslider.min.js"></script>
     <script src="/js/modernizr.custom.79639.js"></script>
-<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=1WPzc5POLG3CaIMs5s7jUR5i"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=1WPzc5POLG3CaIMs5s7jUR5i"></script>
+    <script type="text/javascript">
+      function load(){
+        $.get("/home/ajax",function(result){
+          $(result.Media).each(function(index,emp){
+            console.log(emp)
+            $(".media-list").append('<li><img src="'+'/image/media/'+emp.PictureUrl+'"/></li>')
+          })
+          $(result.News).each(function(index,emp){
+            console.log(emp)
+            $(".news_wr").append('<ul><li><div class="pt"><a href=""><img src="'+'/image/news/'+emp.PictureUrl+'"/><span></span></a></div></li><div class="news_left"><h5 class="font">'+emp.Title+'</h5><p class="beyond font">'+emp.Content+'</p></div></ul>')
+          })
+        })
+      }
+    </script>
     <style type="text/css">
       #allmap{height:250px;}
     </style>
 </head> 
-<body>
+<body onload="load()">
   <div class="hider"><a name="0F"></a></div>
-    <div id="wrap">
-         <div class="nav">
-            <ul class="nav_r">
-              <div id="border">
-              <div class="border1"></div>
-              <div class="border1"></div>
-              <div class="border1"></div>
-              </div>
-              <div class="total">
-              <div class="wraptop">
-                <li class="font"><a href="#"><strong>网站首页</strong></a></li>
-                <li class="font"><a href="#1F"><strong>核心产品</strong></a></li>
-                <li class="font"><a href="#2F"><strong>合作媒体</strong></a></li>
-                <li class="font"><a href="#3F"><strong>新闻动态</strong></a></li>
-                <li class="font"><a href="#4F"><strong>关于我们</strong></a></li>
-              </div>
-            </div>
-            </ul>
-         </div>
-    </div>
-
-
-
-
+  <div id="wrap">
+  <div class="nav">
+    <ul class="nav_r">
+      <div id="border">
+        <div class="border1"></div>
+        <div class="border1"></div>
+        <div class="border1"></div>
+      </div>
+      <div class="total">
+        <div class="wraptop">
+          <li class="font"><a href="#"><strong>网站首页</strong></a></li>
+          <li class="font"><a href="#1F"><strong>核心产品</strong></a></li>
+          <li class="font"><a href="#2F"><strong>合作媒体</strong></a></li>
+          <li class="font"><a href="#3F"><strong>新闻动态</strong></a></li>
+          <li class="font"><a href="#4F"><strong>关于我们</strong></a></li>
+        </div>
+      </div>
+    </ul>
+  </div>
+</div>
 <div class="header">
-  
-<div class="banner" id="b04">
+  <div class="banner" id="b04">
     <ul>
-        <li><img src="/img/cloud.png" alt="" width="100%" height="50%" ></li>
-        <li><img src="/img/cloud.png" alt="" width="100%" height="50%" ></li>
-        <li><img src="/img/cloud.png" alt="" width="100%" height="50%" ></li>
-        <li><img src="/img/cloud.png" alt="" width="100%" height="50%" ></li>
-        <li><img src="/img/cloud.png" alt="" width="100%" height="50%" ></li>
+      <li><img src="/img/cloud.png" alt="" width="100%" height="50%" ></li>
+      <li><img src="/img/cloud.png" alt="" width="100%" height="50%" ></li>
+      <li><img src="/img/cloud.png" alt="" width="100%" height="50%" ></li>
+      <li><img src="/img/cloud.png" alt="" width="100%" height="50%" ></li>
+      <li><img src="/img/cloud.png" alt="" width="100%" height="50%" ></li>
     </ul>
     <a href="javascript:void(0);" class="unslider-arrow04 prev"><img class="arrow" id="al" src="/img/arrowl.png" alt="prev" width="20" height="35"></a>
     <a href="javascript:void(0);" class="unslider-arrow04 next"><img class="arrow" id="ar" src="/img/arrowr.png" alt="next" width="20" height="37"></a>
+  </div>
 </div>
-
-
-</div>
-
 <div class="hider"><a name="1F"></a></div>
-         <div class="content clear">
-            <div class="inPro">
-                <h2><a><strong>核心产品</strong></a></h2>
-                <p>Always adhere to innovation, to provide you with the best produCore product</p>
-             
-               <ul class="inPro_sec">
-                <li class="inPro_sec_a inPro_left">
-                    <ul>
-                        <li><img src="/img/desktop1.png"/></li>
-                        <li><h4 class="P_center">ADIN AD EXCHANGE</h4></li>
-                        <li class="font"><p class="beyond font">的快捷键的开始放假肯定的反对反对是对方身份的方式反对丝丹的疯狂的放得开地是的反对反对反对方</p></li>
-                        <p class="detail"><a href="#">详细信息<span>>></span></a></p>
-                    </ul>
-                </li>
-                <li class="inPro_sec_a inPro_center">
-                    <ul>
-                        <li><img src="/img/desktop2.png"/></li>
-                        <li><h4 class="P_center">ADIN AD EXCHANGE</h4></li>
-                        <li class="font"><p class="beyond font">的快捷键的开始放假肯定的反对反对是对方身份的方式反对丝丹的疯狂的放得开地是的反对反对反对方</p></li>
-                        <p class="detail"><a href="#">详细信息<span>>></span></a></p>
-                    </ul>
-                </li>
-                <li class="inPro_sec_a inPro_right">
-                    <ul>
-                        <li><img src="/img/desktop3.png"/></li>
-                        <li><h4 class="P_center">ADIN AD EXCHANGE</h4></li>
-                        <li class="font"><p class="beyond font">的快捷键的开始放假肯定的反对反对是对方身份的方式反对丝丹的疯狂的放得开地是的反对反对反对方</p></li>
-                        <p class="detail"><a href="#">详细信息<span>>></span></a></p>
-                    </ul>
-                </li>
-                
-               </ul>
-            </div>
-    </div>   
-
-    <div class="hider"><a name="2F">gf</a></div>
-    <div  class="colwrap">
-            <div class="colTv">
-                <h2><a><strong>合作媒体</strong></a></h2>
-                <p>About 100+ home to well-known quality cooperation media ADX can Associated Media</p>
-                <ul>
-                    <li><img src="/img/colabroate tv/col1.png"/></li>
-                    <li><img src="/img/colabroate tv/col2.png"/></li>
-                    <li><img src="/img/colabroate tv/col3.png"/></li>
-                    <li><img src="/img/colabroate tv/col4.png"/></li>
-                    <li><img src="/img/colabroate tv/col5.png"/></li>
-                    <li><img src="/img/colabroate tv/col6.png"/></li>
-                    <li><img src="/img/colabroate tv/col7.png"/></li>
-                    <li><img src="/img/colabroate tv/col8.png"/></li>
-                    
-                </ul>
-            </div>
+  <div class="content clear">
+    <div class="inPro">
+      <h2><a><strong>核心产品</strong></a></h2>
+      <p>Always adhere to innovation, to provide you with the best produCore product</p>
+      <ul class="inPro_sec">
+        <li class="inPro_sec_a inPro_left">
+          <ul>
+            <li><img src="/img/desktop1.png"/></li>
+            <li><h4 class="P_center">ADIN AD EXCHANGE</h4></li>
+            <li class="font"><p class="beyond font">的快捷键的开始放假肯定的反对反对是对方身份的方式反对丝丹的疯狂的放得开地是的反对反对反对方</p></li>
+            <p class="detail"><a href="#">详细信息<span>>></span></a></p>
+          </ul>
+        </li>
+        <li class="inPro_sec_a inPro_center">
+          <ul>
+            <li><img src="/img/desktop2.png"/></li>
+            <li><h4 class="P_center">ADIN AD EXCHANGE</h4></li>
+            <li class="font"><p class="beyond font">的快捷键的开始放假肯定的反对反对是对方身份的方式反对丝丹的疯狂的放得开地是的反对反对反对方</p></li>
+            <p class="detail"><a href="#">详细信息<span>>></span></a></p>
+          </ul>
+        </li>
+        <li class="inPro_sec_a inPro_right">
+          <ul>
+            <li><img src="/img/desktop3.png"/></li>
+            <li><h4 class="P_center">ADIN AD EXCHANGE</h4></li>
+            <li class="font"><p class="beyond font">的快捷键的开始放假肯定的反对反对是对方身份的方式反对丝丹的疯狂的放得开地是的反对反对反对方</p></li>
+            <p class="detail"><a href="#">详细信息<span>>></span></a></p>
+          </ul>
+        </li>
+      </ul>
     </div>
-
-<div class="hider"><a name="3F"></a></div>
-<div class="content">
-  <div class="main">
-            <div class="news">
-                <h2><a><strong>新闻动态</strong></a></h2>
-                <p class="cc">Master the most cutting-edge industry information</p>
-                <p class="cc">News dynamics</p>
-              <div class="news_wr">
-                
-                <ul>
-                  <li>
-                    <div class="pt"><a href=""><img src="/img/news/news1.png"/>
-                        <span></span></a></div>
-                 </li>
-                   <div class="news_left">
-                    <h5 class="font">地球大气</h5>
-                    <p class="beyond font">打发打发打发打发打发打发的身份的反对反对反对反对</p>
-                   </div>
-                </ul>
-                <ul>
-                  <li>
-                    <div class="pt"><a href=""><img src="/img/news/news2.png"/>
-                        <span></span></a></div>
-                 </li>
-                   <div class="news_left">
-                    <h5 class="font">地球大气</h5>
-                    <p class="beyond font">打发打发打发打发打发打发的大煞风景的开发的会计法空间的身份的反对反对反对反对</p>
-                   </div>
-                </ul>
-                <ul>
-                  <li>
-                    <div class="pt"><a href=""><img src="/img/news/news3.png"/>
-                        <span></span></a></div>
-                 </li>
-                   <div class="news_left">
-                    <h5 class="font">地球大气</h5>
-                    <p class="beyond font">打发打发打发打发打发打发的身份的反对反对反对反对</p>
-                   </div>
-                </ul>
-                <ul>
-                  <li>
-                    <div class="pt"><a href=""><img src="/img/news/news4.png"/>
-                        <span></span></a></div>
-                 </li>
-                   <div class="news_left">
-                    <h5 class="font">地球大气</h5>
-                    <p class="beyond font">打发打发打发打发打发打发的身份的反对反对反对反对</p>
-                   </div>
-                </ul>
-                <ul>
-                  <li>
-                    <div class="pt"><a href=""><img src="/img/news/news1.png"/>
-                        <span></span></a></div>
-                 </li>
-                   <div class="news_left">
-                    <h5 class="font">地球大气</h5>
-                    <p class="beyond font">打发打发打发打发打发打发的身份的反对反对反对反对</p>
-                   </div>
-                </ul>
-                <ul>
-                  <li>
-                    <div class="pt"><a href=""><img src="/img/news/news2.png"/>
-                        <span></span></a></div>
-                 </li>
-                   <div class="news_left">
-                    <h5 class="font">地球大气</h5>
-                    <p class="beyond font">打发打发打发打发打发打发的身份的反对反对反对反对</p>
-                   </div>
-                </ul>
-                <ul>
-                  <li>
-                    <div class="pt"><a href=""><img src="/img/news/news3.png"/>
-                        <span></span></a></div>
-                 </li>
-                   <div class="news_left">
-                    <h5 class="font">地球大气</h5>
-                    <p class="beyond font">打发打发打发打发打发打发的身份的反对反对反对反对</p>
-                   </div>
-                </ul>
-                <ul>
-                  <li>
-                    <div class="pt"><a href=""><img src="/img/news/news4.png"/>
-                        <span></span></a></div>
-                 </li>
-                   <div class="news_left">
-                    <h5 class="font">地球大气</h5>
-                    <p class="beyond font">打发打发打发打发打发打发的身份的反对反对反对反对</p>
-                   </div>
-                </ul>
-
-               
-              </div>
-       </div>
-   </div>
-</div>
-            <div class="re_All">
-                <div><a href="" class="circle"></a></div>
-            </div>
-         
-         <div class="hider"><a name="4F"></a></div>   
-         <div class="about_us">
-
-            <h2><a><strong>关于我们</strong></a></h2>
-            <p>A collection of PC and mobile Internet advertising global, Glob A collection of PC and mobile Internet advertising global, Glob pdfd fifk About us</p>
-            <ul>
-                <li>
-                    <ul class="about_us_top">
-                        <li><div class="about_us_right png1"><p>我们听对方的身份的对方的生死i看见对方看见方的</p></div></li>
-                         <li><div class="about_us_right png2"><p>我们听对方的身份的对方的生死i看见对方看见方的</p></div></li>
-                         <li><div class="about_us_right png3"><p>我们听对方的身份的对方的生死i看见对方看见方的</p></div></li>
-                         <li><div class="about_us_right png4"><p>我们听对方的身份的对方的生死i看见对方看见方的</p></div></li>
-                    
-                    </ul>
-                </li>
-
-                
-                <div id="allmap"></div>
-
-              
-
-            </ul>
-               
-         </div>
-      
-        
-         <div class="footer">
-             <ul>
-                <li class="footer_left">
-                    <span>联系我们 |</span>
-                    <span>服务条款 |</span>
-                    <span>服务政策 |</span>
-                    <span>加入我们 |</span>       
-                </li>
-                <li class="footer_right"><span>Copyrght © 2014 adutp.com. All Rights Reserved. 京CIP备xxxxxxx号</span></li>  
-             </ul>  
-         </div>     
-    
-    <div class="top_btn" class="clear"><a href="#0F"><img src="\img\aboutus\top2.png"/></a></div> 
-
+  </div>   
+  <div class="hider"><a name="2F">gf</a></div>
+  <div  class="colwrap">
+    <div class="colTv">
+      <h2><a><strong>合作媒体</strong></a></h2>
+      <p>About 100+ home to well-known quality cooperation media ADX can Associated Media</p>
+      <ul class="media-list">
+      </ul>
+    </div>
+  </div>
+  <div class="hider"><a name="3F"></a></div>
+  <div class="content">
+    <div class="main">
+      <div class="news">
+        <h2><a><strong>新闻动态</strong></a></h2>
+        <p class="cc">Master the most cutting-edge industry information</p>
+        <p class="cc">News dynamics</p>
+        <div class="news_wr">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="re_All">
+    <div><a href="" class="circle"></a></div>
+  </div>
+  <div class="hider"><a name="4F"></a></div>   
+  <div class="about_us">
+    <h2><a><strong>关于我们</strong></a></h2>
+    <p>A collection of PC and mobile Internet advertising global, Glob A collection of PC and mobile Internet advertising global, Glob pdfd fifk About us</p>
+    <ul>
+      <li>
+        <ul class="about_us_top">
+          <li><div class="about_us_right png1"><p>我们听对方的身份的对方的生死i看见对方看见方的</p></div></li>
+          <li><div class="about_us_right png2"><p>我们听对方的身份的对方的生死i看见对方看见方的</p></div></li>
+          <li><div class="about_us_right png3"><p>我们听对方的身份的对方的生死i看见对方看见方的</p></div></li>
+          <li><div class="about_us_right png4"><p>我们听对方的身份的对方的生死i看见对方看见方的</p></div></li>
+        </ul>
+      </li>
+      <div id="allmap"></div>
+    </ul>
+  </div>
+  <div class="footer">
+    <ul>
+      <li class="footer_left">
+        <span>联系我们 |</span>
+        <span>服务条款 |</span>
+        <span>服务政策 |</span>
+        <span>加入我们 |</span>       
+      </li>
+    <li class="footer_right"><span>Copyrght © 2014 adutp.com. All Rights Reserved. 京CIP备xxxxxxx号</span></li>  
+    </ul>  
+  </div>     
+  <div class="top_btn" class="clear"><a href="#0F"><img src="\img\aboutus\top2.png"/></a></div> 
 </body>
 </html>
 <script type="text/javascript">
-// 百度地图API功能
-var sContent="常高新E726"
-var map = new BMap.Map("allmap");
-var point = new BMap.Point(119.999733,31.817005);
-map.centerAndZoom(point, 15);
-map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-var marker = new BMap.Marker(point);  // 创建标注
-map.addOverlay(marker);               // 将标注添加到地图中
-var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象
-marker.addEventListener("click", function(){          
+  // 百度地图API功能
+  var sContent="常高新E726"
+  var map = new BMap.Map("allmap");
+  var point = new BMap.Point(119.999733,31.817005);
+  map.centerAndZoom(point, 15);
+  map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+  var marker = new BMap.Marker(point);  // 创建标注
+  map.addOverlay(marker);               // 将标注添加到地图中
+  var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象
+  marker.addEventListener("click", function(){          
     map.openInfoWindow(infoWindow,point); //开启信息窗口
   });
 </script>

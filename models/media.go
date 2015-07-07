@@ -19,9 +19,9 @@ func GetMediaCount() (int64, error) {
 	return count, err
 }
 
-func GetMediaLimit(p int) ([]Media, error) {
+func GetMediaLimit(s int, p int) ([]Media, error) {
 	media := make([]Media, 0)
-	err := Xorm.Limit(10, 10*p).Find(&media)
+	err := Xorm.Limit(s, s*p).Find(&media)
 	return media, err
 }
 
@@ -43,5 +43,11 @@ func DeleteMedia(id int64) error {
 func SelectMedia(id int64) (*Media, error) {
 	media := new(Media)
 	_, err := Xorm.Id(id).Get(media)
+	return media, err
+}
+
+func GetMediaHomeList() ([]Media, error) {
+	media := make([]Media, 0)
+	err := Xorm.Where("status=1 and order_by=1").Find(&media)
 	return media, err
 }

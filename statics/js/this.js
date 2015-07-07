@@ -1,18 +1,19 @@
-$(function(){
-     if($(document).scrollTop()>0){
-        $(".top_btn").css("display","block");
-     };
-});
+$(function(){ 
 
-
-$(function(){
+    $(window).on('scroll',function(){
+        if($(window).scrollTop()>500){
+            $(".top_btn").css("display","block");
+        }
+        else{
+            $(".top_btn").css("display","none");
+        }
+    }) 
 
      $("#border").bind("click",function(){
         $(".wraptop").slideToggle();
-     });    
-});
+     });  
 
-$(function(){
+
     //限制字符个数
      var Sys = {};
         var ua = navigator.userAgent.toLowerCase();

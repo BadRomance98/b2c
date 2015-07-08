@@ -180,14 +180,21 @@
 </html>
 <script type="text/javascript">
   // 百度地图API功能
-  var sContent="常高新E726"
   var map = new BMap.Map("allmap");
   var point = new BMap.Point(119.999733,31.817005);
   map.centerAndZoom(point, 15);
   map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
   var marker = new BMap.Marker(point);  // 创建标注
   map.addOverlay(marker);               // 将标注添加到地图中
-  var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象
+
+  var conent="地址:江苏省常州市新北区常州软件园E栋726"
+  var opts = {
+    width : 250,     // 信息窗口宽度
+    height: 60,     // 信息窗口高度
+    title : "常州优图普信息技术有限公司" , // 信息窗口标题
+    enableMessage:false//设置允许信息窗发送短息
+  };
+  var infoWindow = new BMap.InfoWindow(conent,opts);  // 创建信息窗口对象
   marker.addEventListener("click", function(){          
     map.openInfoWindow(infoWindow,point); //开启信息窗口
   });

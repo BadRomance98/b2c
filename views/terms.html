@@ -1,30 +1,30 @@
 {{template "info_header"}}
 	<title>服务条款</title>
-	<link rel="stylesheet" type="text/css" href="http://static.instreet.cn/styles/comman.css?v=2.0.8.3652"/>
-	<link rel="stylesheet" type="text/css" href="http://static.instreet.cn/styles/friend.css?v=2.0.8.3652"/>
+	<link rel="stylesheet" type="text/css" href="/css/terms.css">
 </head>
 <body>
 {{template "info_header_list"}}
-    <div class="left_cont">
+  <div class="cont">
+	<div class="left_cont">
 	    <!--左边导航-->
-	    <ul class="vertical_nav">
-	    	<li {{if .isContact}}class="active"{{end}}><a href="/contact">联系我们</a></li>
-            <li {{if .isTerm}}class="active"{{end}}><a href="/terms">服务条款</a></li>
-            <li {{if .isPolicy}}class="active"{{end}}><a href="/policy">服务政策</a></li>
-		    <li {{if .isJoin}}class="active"{{end}}><a href="/join">加入我们</a></li>
-		</ul>
-	</div>    		
+	    <ul class="">
+          <a href><li>联系我们</li></a>
+          <a href><li>服务条款</li></a>
+          <a href><li>服务政策</li></a>
+          <a href><li>加入我们</li></a>
+         </ul>
+	</div>		
 	<div class="right_cont">
 	    <div class="text_wrap">
 	        <h2>服务条款<span>Terms of service</span></h2>
 			 <h3><center>使用条款</center></h3>
 			 <ul>
-			    <li><a href="javascript:void(0)" onclick="document.getElementById('i1').scrollIntoView();">服务条款协议</a></li>
-			    <li><a href="javascript:void(0)" onclick="document.getElementById('i2').scrollIntoView();">用户使用规则</a></li>
-			    <li><a href="javascript:void(0)" onclick="document.getElementById('i3').scrollIntoView();">服务风险及免责声明</a></li>
-			    <li><a href="javascript:void(0)" onclick="document.getElementById('i4').scrollIntoView();">服务变更、中断或终止及服务条款的修改</a></li>
-			    <li><a href="javascript:void(0)" onclick="document.getElementById('i5').scrollIntoView();">知识产权声明</a></li>
-			    <li><a href="javascript:void(0)" onclick="document.getElementById('i6').scrollIntoView();">法律</a></li>
+			    <li class="left"><a href="javascript:void(0)" onclick="document.getElementById('i1').scrollIntoView();">服务条款协议</a></li>
+			    <li class="left"><a href="javascript:void(0)" onclick="document.getElementById('i2').scrollIntoView();">用户使用规则</a></li>
+			    <li class="left"><a href="javascript:void(0)" onclick="document.getElementById('i3').scrollIntoView();">服务风险及免责声明</a></li>
+			    <li class="left"><a href="javascript:void(0)" onclick="document.getElementById('i4').scrollIntoView();">服务变更、中断或终止及服务条款的修改</a></li>
+			    <li class="left"><a href="javascript:void(0)" onclick="document.getElementById('i5').scrollIntoView();">知识产权声明</a></li>
+			    <li class="left"><a href="javascript:void(0)" onclick="document.getElementById('i6').scrollIntoView();">法律</a></li>
 			 </ul>	
 				<h3  id="i1">1.本服务条款是用户（您）与无锡公司（下称尚街（instreet.cn)公司）之间的协议。</h3>	
 				<p>1-1 重要须知：尚街公司在此特别提醒，用户（您）欲访问和使用尚街（instreet.cn)网，必须事先认真阅读本服务条款中各条款， 包括免除或者限制尚街公司 责任的免责条款及对用户的权利限制条款。请您审阅并选择接受或不接受本服务条款（未成年人审阅时应得到法定监护人 的陪同）。如您不同意本服务 条款及可能随时对其进行的修改，您应不使用或主动取消        公司提供的服务。您的使用行为将被视为您对本服务条款全部的完全接受，包 括接受尚街公司对尚街（instreet.cn)服务条款 随时所 做的任何修改。 
@@ -128,6 +128,7 @@
 			</div>
   		</div>
   	</div>
+  </div>
 	<div class="clear"></div>
 {{template "foot"}}
 </body>

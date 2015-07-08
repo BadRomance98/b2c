@@ -1,7 +1,9 @@
 body{background: none repeat scroll 0 0 #F4F4F4;}
 .main_content{width:960px;margin:0 auto;}
 .fl{float:left;}.fr{float:right;}
+.cont{width: 1000px;text-align:right;margin: 0 auto;}
 .left_cont,.right_cont{float:left;padding:0 10px;text-align:left;}
+
 
 .vertical_nav {    
    border: 1px solid #CCCCCC;
@@ -39,6 +41,7 @@ body{background: none repeat scroll 0 0 #F4F4F4;}
     color: #6A6A6A;
 	padding-bottom:30px;
 	font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+  
 }
 .text_wrap ul li {
     list-style: disc outside none;

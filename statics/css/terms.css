@@ -1,0 +1,23 @@
+ul,li{padding:0;margin: 0;}
+
+body{background: #fff;}
+.cont{width:1000px;margin:0 auto;background:rgb(245,245,245);}
+.left_cont{float: left;font-size:18px;font-weight:bold;
+	line-height:40px;width:150px;height:280px;padding-left: 2%;
+	padding-top: 20px;
+}
+.left_cont li{border: 2px solid rgb(230,230,230);text-align: center;}
+.right_cont{width:800px;float:right;}	
+.cont a:hover{
+	display: block;
+    color: blue;
+    background: rgb(200,200,200);
+}
+h2,span,h3{color: rgb(0,130,192);}
+p{text-indent: 2em;}
+.clear:after{content: " ";clear: both;display: block;}
+.clear{zoom:1;}
+.text_wrap .left{
+	padding-left: 4%;
+	background:;
+}

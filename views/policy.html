@@ -1,19 +1,19 @@
 {{template "info_header"}}
 	<title>服务政策</title>
-	<link rel="stylesheet" type="text/css" href="http://static.instreet.cn/styles/comman.css?v=2.0.8.3652"/>
-	<link rel="stylesheet" type="text/css" href="http://static.instreet.cn/styles/friend.css?v=2.0.8.3652"/>
+  <link rel="stylesheet" type="text/css" href="/css/terms.css">
 </head>
 <body>
 {{template "info_header_list"}}
- 	<div class="left_cont">
+ 	 <div class="cont">
+	<div class="left_cont">
 	    <!--左边导航-->
-	    <ul class="vertical_nav">
-	    	<li {{if .isContact}}class="active"{{end}}><a href="/contact">联系我们</a></li>
-            <li {{if .isTerm}}class="active"{{end}}><a href="/terms">服务条款</a></li>
-            <li {{if .isPolicy}}class="active"{{end}}><a href="/policy">服务政策</a></li>
-		    <li {{if .isJoin}}class="active"{{end}}><a href="/join">加入我们</a></li>
-		</ul>
-	</div>   
+	    <ul class="">
+          <a href><li>联系我们</li></a>
+          <a href><li>服务条款</li></a>
+          <a href><li>服务政策</li></a>
+          <a href><li>加入我们</li></a>
+         </ul>
+	</div>		
 	<div class="right_cont">
     	<div class="text_wrap">
     		<h2>隐私政策<span>Privacy policy </span></h2>
@@ -92,6 +92,7 @@
 				</p> </div>
   </div>
   </div>
+</div>
 		<div class="clear"></div>
 
 {{template "foot"}}

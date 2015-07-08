@@ -37,26 +37,7 @@
 </head> 
 <body onload="load()">
   <div class="hider"><a name="0F"></a></div>
-  <div id="wrap">
-  <div class="nav">
-    <ul class="nav_r">
-      <div id="border">
-        <div class="border1"></div>
-        <div class="border1"></div>
-        <div class="border1"></div>
-      </div>
-      <div class="total">
-        <div class="wraptop">
-          <li class="font"><a href="#"><strong>网站首页</strong></a></li>
-          <li class="font"><a href="#1F"><strong>核心产品</strong></a></li>
-          <li class="font"><a href="#2F"><strong>合作媒体</strong></a></li>
-          <li class="font"><a href="#3F"><strong>新闻动态</strong></a></li>
-          <li class="font"><a href="#4F"><strong>关于我们</strong></a></li>
-        </div>
-      </div>
-    </ul>
-  </div>
-</div>
+  {{template "info_header_list"}}
 
 
 
@@ -190,17 +171,7 @@
       <div id="allmap"></div>
     </ul>
   </div>
-  <div class="footer">
-    <ul>
-      <li class="footer_left">
-        <span>联系我们 |</span>
-        <span>服务条款 |</span>
-        <span>服务政策 |</span>
-        <span>加入我们 |</span>       
-      </li>
-    <li class="footer_right"><span>Copyrght © 2014 adutp.com. All Rights Reserved. 京CIP备xxxxxxx号</span></li>  
-    </ul>  
-  </div>     
+  {{template "foot"}}    
   <div class="top_btn" class="clear"><a href="#0F"><img src="\img\aboutus\top2.png"/></a></div> 
 </body>
 </html>

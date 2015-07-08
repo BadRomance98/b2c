@@ -58,3 +58,10 @@ func HomePolicy(w http.ResponseWriter, r *http.Request) {
 	data["isPolicy"] = true
 	t.Execute(w, data)
 }
+func Homemedia(w http.ResponseWriter, r *http.Request) {
+	t, err := template.ParseFiles("views/media.html", "views/info_header.tpl", "views/foot.tpl", "views/header.tpl")
+	pageNotFound(w, err)
+	data := make(map[string]interface{})
+	data["isContact"] = true
+	t.Execute(w, data)
+}

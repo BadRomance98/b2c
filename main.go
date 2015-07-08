@@ -50,5 +50,6 @@ func main() {
 	http.HandleFunc("/join", controllers.HomeJoin)
 	http.HandleFunc("/contact", controllers.HomeContact)
 	http.HandleFunc("/policy", controllers.HomePolicy)
+	http.HandleFunc("/media_read", controllers.Homemedia)
 	http.ListenAndServe(HttpPort, nil)
 }
